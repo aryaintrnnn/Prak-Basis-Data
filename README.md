@@ -1,5 +1,3 @@
-# Prak-Basis-Data
-Berisikan file-file selama perkuliahan Pratikum Basis Data semester 2 ITB Stikom Bali
 
 ## Documentation
 **UTS**
@@ -56,6 +54,19 @@ USE STIKOM_273;
 
 ```
 USE STIKOM_2 DIGIT AKHIR NIM;
+```
+
+**AWAL : **
+```
+INSERT INTO Poliklinik (kd_poliklinik, nama, hari_buka, jenis_instalasi) VALUES
+    ('P01', 'Poliklinik Jantung', 'Senin-Jumat', 0),
+    ('P02', 'Poliklinik Anak', 'Senin-Sabtu', 1);
+```
+** UBAH MENJADI : **
+```
+INSERT INTO Poliklinik (kd_poliklinik, nama, hari_buka, jenis_instalasi) VALUES
+    ('bebas 1 huruf 2 angka', 'Poliklinik Jantung', 'Senin-Jumat', 0),
+    ('bebas 1 huruf 2 angka', 'Poliklinik Anak', 'Senin-Sabtu', 1);
 ```
 
 **AWAL :**
