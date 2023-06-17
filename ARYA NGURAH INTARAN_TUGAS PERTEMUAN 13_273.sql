@@ -21,7 +21,7 @@ CREATE TABLE Pegawai
 (
     Id_Karyawan CHAR(5) PRIMARY KEY NOT NULL,
     nama_depan VARCHAR(30),
-    ID_Dapartemen CHAR(2),
+    ID_Departemen CHAR(2),
     Upah CHAR(7),
 )
 
@@ -121,4 +121,4 @@ WHERE TrPinjam.TglKembali > TrPinjam.TglPinjam + TrPinjam.LamaPinjam
 
 SELECT *
 FROM MsPeminjam
-WHERE KdPeminjaman IN (SELECT DISTINCT KdPeminjaman FROM TrPinjam WHERE denda > 0)
+WHERE KdPeminjaman IN (SELECT DISTINCT KdPeminjaman FROM TrPinjam WHERE Denda > 0)
