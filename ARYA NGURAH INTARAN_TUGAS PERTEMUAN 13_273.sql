@@ -19,7 +19,7 @@ USE rental_film
 
 CREATE TABLE Pegawai
 (
-    id_karyawan CHAR(5) PRIMARY KEY NOT NULL,
+    Id_Karyawan CHAR(5) PRIMARY KEY NOT NULL,
     nama_depan VARCHAR(30),
     ID_Dapartemen CHAR(2),
     Upah CHAR(7),
@@ -27,7 +27,7 @@ CREATE TABLE Pegawai
 
 CREATE TABLE Kinerja_Pegawai
 (
-    ID_Karyawan CHAR(5) FOREIGN KEY REFERENCES Pegawai(ID_Karyawan) ON UPDATE CASCADE ON DELETE CASCADE,
+    Id_Karyawan CHAR(5) FOREIGN KEY REFERENCES Pegawai(Id_Karyawan) ON UPDATE CASCADE ON DELETE CASCADE,
     Bulan CHAR(2),
     Kinerja CHAR(3),
 )
@@ -50,12 +50,12 @@ INSERT INTO Kinerja_Pegawai VALUES
     ('102','02','95');
 
 
-SELECT * FROM pegawai
-WHERE upah < (SELECT upah FROM pegawai WHERE id_karyawan = '105')
+SELECT * FROM Pegawai
+WHERE Upah < (SELECT Upah FROM Pegawai WHERE Id_Karyawan = '105')
 
 SELECT MIN (Kinerja) AS [nilai terendah]
 FROM Kinerja_Pegawai
-WHERE ID_Karyawan = (SELECT ID_Karyawan FROM Pegawai
+WHERE Id_Karyawan = (SELECT Id_Karyawan FROM Pegawai
 WHERE nama_depan = 'Gede Ronaldo')
 
 CREATE TABLE MsFilm
